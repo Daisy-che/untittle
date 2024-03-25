@@ -2,7 +2,7 @@ fun main() {
     sentence("Barnie bakes brown bagels and burns")
  println(arr(arrayOf(1,2,3)))
     volume(3.14*4/3)
-    isPalindrome("madam","wow","kayak")
+    println( isPalindrome("madam","wow","kayak"))
 
 }
 fun sentence(sentence:String){
@@ -19,7 +19,7 @@ fun arr(number:Array<Int>): Any {
 fun volume (volumeOfSphere:Double){
     println(volumeOfSphere)
 }
-fun isPalindrome(words: String, s: String, s1: String) {
-   var sentence=words
-    println(sentence)
+fun isPalindrome(words: String, s: String, s1: String): Boolean {
+    val words=words.replace("//s+".toRegex(), "").toLowerCase()
+    return words==words.reversed()
 }
